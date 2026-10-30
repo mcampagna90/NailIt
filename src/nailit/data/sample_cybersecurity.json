@@ -1,0 +1,113 @@
+{
+  "name": "cybersecurity-basics",
+  "version": "1",
+  "questions": [
+    {
+      "id": "cyber-rbac-001",
+      "domain": "cybersecurity",
+      "topic": "access-control",
+      "level": 1,
+      "type": "open",
+      "question": "What is RBAC?",
+      "answer": "Role-Based Access Control: permissions are assigned to roles, and users receive permissions by inheriting them from roles rather than one by one.",
+      "explanation": "In RBAC you define roles (e.g. 'admin', 'editor') each with a set of permissions. Assigning a user to a role grants them all of the role's permissions. It simplifies management compared with assigning permissions per user.",
+      "tags": ["rbac", "authorization"],
+      "level_chain": "access-control-rbac"
+    },
+    {
+      "id": "cyber-rbac-002",
+      "domain": "cybersecurity",
+      "topic": "access-control",
+      "level": 2,
+      "type": "single_choice",
+      "question": "What is the main difference between RBAC and ABAC?",
+      "choices": [
+        "RBAC uses roles, ABAC evaluates attributes (user, resource, context)",
+        "They are the same thing with different names",
+        "ABAC only works for databases, RBAC only for files",
+        "RBAC is more recent than ABAC"
+      ],
+      "correct": [0],
+      "explanation": "Correct because the real distinction is the decision input: RBAC grants access through roles, while ABAC (Attribute-Based Access Control) evaluates dynamic attributes — who you are, what you request, under which conditions (time, location, risk). ABAC is more flexible and granular but harder to govern. They are not the same (option 2), neither is tied to databases vs files (option 3), and recency (option 4) is irrelevant to the difference.",
+      "tags": ["rbac", "abac", "authorization"],
+      "level_chain": "access-control-rbac",
+      "prerequisites": ["cyber-rbac-001"]
+    },
+    {
+      "id": "cyber-rbac-003",
+      "domain": "cybersecurity",
+      "topic": "access-control",
+      "level": 3,
+      "type": "open",
+      "question": "How would you apply the principle of least privilege in an RBAC model at a large organization?",
+      "answer": "By defining granular, function-specific roles, granting each role only the strictly necessary permissions, using separation of duties (SoD), periodic access reviews, and temporary/just-in-time roles for privileged activity.",
+      "explanation": "Least privilege: every identity has only the permissions it needs. In RBAC at scale this means avoiding 'do-everything' roles, using role hierarchies carefully, periodic access reviews, and granting elevated privileges on demand and time-bound to reduce the attack surface.",
+      "tags": ["rbac", "least-privilege", "authorization"],
+      "level_chain": "access-control-rbac",
+      "prerequisites": ["cyber-rbac-002"]
+    },
+    {
+      "id": "cyber-crypto-001",
+      "domain": "cybersecurity",
+      "topic": "cryptography",
+      "level": 1,
+      "type": "true_false",
+      "question": "Symmetric cryptography uses the same key to encrypt and decrypt.",
+      "choices": ["True", "False"],
+      "correct": [0],
+      "explanation": "In symmetric cryptography (e.g. AES) the sender and receiver share a single secret key used both to encrypt and to decrypt. The challenge is distributing that key securely.",
+      "tags": ["crypto", "symmetric"],
+      "level_chain": "crypto-basics"
+    },
+    {
+      "id": "cyber-crypto-002",
+      "domain": "cybersecurity",
+      "topic": "cryptography",
+      "level": 2,
+      "type": "open",
+      "question": "What is asymmetric cryptography for, and how does it relate to symmetric cryptography in TLS?",
+      "answer": "Asymmetric cryptography uses a key pair (public/private) and is used for key exchange and digital signatures. In TLS, asymmetric cryptography authenticates and securely exchanges a session key, then symmetric cryptography (faster) encrypts the actual traffic.",
+      "explanation": "Asymmetric crypto (e.g. RSA, ECDH) solves key distribution: two parties agree on a secret securely without ever having shared it before. In TLS the handshake negotiates a symmetric session key using asymmetric crypto, then the data travels encrypted symmetrically.",
+      "tags": ["crypto", "asymmetric", "tls"],
+      "level_chain": "crypto-basics",
+      "prerequisites": ["cyber-crypto-001"]
+    },
+    {
+      "id": "cyber-net-001",
+      "domain": "cybersecurity",
+      "topic": "network-security",
+      "level": 1,
+      "type": "single_choice",
+      "question": "Which of these best describes a firewall?",
+      "choices": [
+        "A system that filters network traffic according to rules",
+        "An antivirus for email",
+        "An encryption protocol",
+        "A password manager"
+      ],
+      "correct": [0],
+      "explanation": "Correct because a firewall's defining job is to filter network traffic against a rule set (by port, IP, protocol, connection state). The other options describe different controls: antivirus scans content, encryption protects confidentiality, a password manager stores credentials — none of them filter traffic, which is why they are wrong here.",
+      "tags": ["firewall", "network"],
+      "level_chain": "net-security"
+    },
+    {
+      "id": "cyber-net-002",
+      "domain": "cybersecurity",
+      "topic": "network-security",
+      "level": 2,
+      "type": "multiple_choice",
+      "question": "Which of the following are valid defense-in-depth techniques? (multiple answers)",
+      "choices": [
+        "Network segmentation",
+        "Multi-factor authentication",
+        "Using a single strong password for everything",
+        "Centralized monitoring and logging"
+      ],
+      "correct": [0, 1, 3],
+      "explanation": "Correct because defense in depth layers independent controls so one failure does not break everything: network segmentation limits lateral movement, MFA hardens authentication, and centralized logging/monitoring enables detection. Reusing a single password is wrong — it is a single point of failure, the opposite of layering.",
+      "tags": ["defense-in-depth", "network"],
+      "level_chain": "net-security",
+      "prerequisites": ["cyber-net-001"]
+    }
+  ]
+}

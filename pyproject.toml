@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nailit"
+version = "0.1.0"
+description = "Ripassa e arriva sicuro al colloquio tecnico: motore di apprendimento incrementale su banche di domande standardizzate."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+    "pydantic>=2.0",
+    "jsonschema>=4.0",
+    "pyyaml>=6.0",
+    "typer>=0.9",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+nailit = "nailit.cli:app"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+nailit = ["schema/*.json", "data/*.json"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+# TestSpec/Test sono dataclass di dominio, non classi di test.
+python_classes = "Test*Case"

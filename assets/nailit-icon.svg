@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="950" height="950" viewBox="0 0 950 950">
+<title>NailIt — logo</title>
+<desc>Emblema vintage inciso: un chiodo stilizzato (nail it), a tratto d'inchiostro blu navy.</desc>
+<rect width="950" height="950" fill="#fff"/>
+
+<g transform="translate(475 475)" fill="none" stroke="#102d59" stroke-linecap="round" stroke-linejoin="round">
+
+  <!-- outer double ring -->
+  <circle cx="0" cy="0" r="300" stroke-width="10"/>
+  <circle cx="0" cy="0" r="282" stroke-width="3"/>
+
+  <!-- bezel ticks -->
+  <g stroke-width="4">
+    <line x1="0" y1="-282" x2="0" y2="-262"/>
+    <line x1="199" y1="-199" x2="185" y2="-185"/>
+    <line x1="282" y1="0" x2="262" y2="0"/>
+    <line x1="199" y1="199" x2="185" y2="185"/>
+    <line x1="0" y1="282" x2="0" y2="262"/>
+    <line x1="-199" y1="199" x2="-185" y2="185"/>
+    <line x1="-282" y1="0" x2="-262" y2="0"/>
+    <line x1="-199" y1="-199" x2="-185" y2="-185"/>
+  </g>
+  <g stroke-width="2" opacity="0.7">
+    <line x1="108" y1="-260" x2="100" y2="-241"/>
+    <line x1="203" y1="-165" x2="188" y2="-153"/>
+    <line x1="260" y1="-108" x2="241" y2="-100"/>
+    <line x1="260" y1="108" x2="241" y2="100"/>
+    <line x1="203" y1="165" x2="188" y2="153"/>
+    <line x1="108" y1="260" x2="100" y2="241"/>
+    <line x1="-108" y1="260" x2="-100" y2="241"/>
+    <line x1="-203" y1="165" x2="-188" y2="153"/>
+    <line x1="-260" y1="108" x2="-241" y2="100"/>
+    <line x1="-260" y1="-108" x2="-241" y2="-100"/>
+    <line x1="-203" y1="-165" x2="-188" y2="-153"/>
+    <line x1="-108" y1="-260" x2="-100" y2="-241"/>
+  </g>
+
+  <!-- inner guide circle -->
+  <circle cx="0" cy="0" r="212" stroke-width="3" opacity="0.5"/>
+
+  <!-- the nail -->
+  <g transform="rotate(14)">
+    <path d="M -96 -205 Q -96 -226 -70 -228 L 70 -228 Q 96 -226 96 -205 Q 96 -182 70 -179 L -70 -179 Q -96 -182 -96 -205 Z"
+          fill="#102d59" stroke="none"/>
+    <path d="M -78 -214 Q 0 -226 78 -214" stroke="#fff" stroke-width="4" opacity="0.5"/>
+    <path d="M -27 -179 L 27 -179 L 12 150 L 0 210 L -12 150 Z" fill="#102d59" stroke="none"/>
+    <path d="M 0 -165 L 0 135" stroke="#fff" stroke-width="3" opacity="0.4"/>
+  </g>
+</g>
+</svg>

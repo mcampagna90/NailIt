@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1160" viewBox="0 0 1000 1160">
+<title>NailIt — logo e payoff</title>
+<desc>Emblema vintage inciso: un chiodo stilizzato (nail it), con il marchio NailIt e il payoff Nail your technical interview.</desc>
+<rect width="1000" height="1160" fill="#fff"/>
+
+<!-- ===== emblem: an engraved nail inside a badge ===== -->
+<g transform="translate(500 400)" fill="none" stroke="#102d59" stroke-linecap="round" stroke-linejoin="round">
+
+  <!-- outer double ring (badge frame) -->
+  <circle cx="0" cy="0" r="300" stroke-width="10"/>
+  <circle cx="0" cy="0" r="282" stroke-width="3"/>
+
+  <!-- bezel ticks (engraved) -->
+  <g stroke-width="4">
+    <line x1="0" y1="-282" x2="0" y2="-262"/>
+    <line x1="199" y1="-199" x2="185" y2="-185"/>
+    <line x1="282" y1="0" x2="262" y2="0"/>
+    <line x1="199" y1="199" x2="185" y2="185"/>
+    <line x1="0" y1="282" x2="0" y2="262"/>
+    <line x1="-199" y1="199" x2="-185" y2="185"/>
+    <line x1="-282" y1="0" x2="-262" y2="0"/>
+    <line x1="-199" y1="-199" x2="-185" y2="-185"/>
+  </g>
+  <g stroke-width="2" opacity="0.7">
+    <line x1="108" y1="-260" x2="100" y2="-241"/>
+    <line x1="203" y1="-165" x2="188" y2="-153"/>
+    <line x1="260" y1="-108" x2="241" y2="-100"/>
+    <line x1="260" y1="108" x2="241" y2="100"/>
+    <line x1="203" y1="165" x2="188" y2="153"/>
+    <line x1="108" y1="260" x2="100" y2="241"/>
+    <line x1="-108" y1="260" x2="-100" y2="241"/>
+    <line x1="-203" y1="165" x2="-188" y2="153"/>
+    <line x1="-260" y1="108" x2="-241" y2="100"/>
+    <line x1="-260" y1="-108" x2="-241" y2="-100"/>
+    <line x1="-203" y1="-165" x2="-188" y2="-153"/>
+    <line x1="-108" y1="-260" x2="-100" y2="-241"/>
+  </g>
+
+  <!-- inner guide circle (engraved) -->
+  <circle cx="0" cy="0" r="212" stroke-width="3" opacity="0.5"/>
+
+  <!-- ===== the nail, slightly tilted for dynamism ===== -->
+  <g transform="rotate(14)">
+    <!-- head: flat wide cap -->
+    <path d="M -96 -205 Q -96 -226 -70 -228 L 70 -228 Q 96 -226 96 -205 Q 96 -182 70 -179 L -70 -179 Q -96 -182 -96 -205 Z"
+          fill="#102d59" stroke="none"/>
+    <!-- head top highlight (engraved) -->
+    <path d="M -78 -214 Q 0 -226 78 -214" stroke="#fff" stroke-width="4" opacity="0.5"/>
+
+    <!-- shank: tapering from under the head to a sharp point -->
+    <path d="M -27 -179 L 27 -179 L 12 150 L 0 210 L -12 150 Z" fill="#102d59" stroke="none"/>
+    <!-- shank center line (engraved) -->
+    <path d="M 0 -165 L 0 135" stroke="#fff" stroke-width="3" opacity="0.4"/>
+  </g>
+</g>
+
+<!-- ===== wordmark ===== -->
+<text x="500" y="850" text-anchor="middle" fill="#102d59"
+      font-family="Avenir Next, Montserrat, Arial, sans-serif"
+      font-size="100" font-weight="700" letter-spacing="-2">NailIt</text>
+
+<!-- separator -->
+<path d="M 330 888 H 670" stroke="#102d59" stroke-width="3" opacity=".65"/>
+
+<!-- payoff -->
+<text x="500" y="945" text-anchor="middle" fill="#102d59"
+      font-family="Avenir Next, Montserrat, Arial, sans-serif"
+      font-size="29" font-weight="400" letter-spacing="1.2">Nail your technical interview</text>
+</svg>

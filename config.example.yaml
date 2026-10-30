@@ -1,0 +1,33 @@
+# Example NailIt configuration. Copy to config.yaml and adapt.
+
+# Path to the question bank (JSON or YAML). If omitted, the bundled sample is used.
+bank_path: src/nailit/data/sample_cybersecurity.json
+
+# User profile: keeps different people's progress separate.
+profile: default
+
+# Where to save the learning state.
+state_dir: .nailit_state
+
+# Incremental engine parameters (all optional: they have reasonable defaults).
+engine:
+  # Review intervals per grade, in seconds.
+  interval_dont_know: 30
+  interval_unsure: 120
+  interval_know: 86400       # 1 day
+  interval_know_well: 604800 # 7 days
+  # Mastery.
+  mastery_up: 0.34           # increment when you "know it"
+  mastery_down: 0.5          # reduction factor when you "don't know"
+  advance_threshold: 0.3     # above this, a level unlocks the next in the chain
+  mastery_threshold: 0.8     # above this, a level counts as "mastered"
+  # How much balancing across topics weighs (0 = verticalize only).
+  balance_weight: 1.0
+  # Learning mode: depth | breadth | balanced (default balanced).
+  #   depth    = go deep on a chain as soon as a level unlocks
+  #   breadth  = cover every topic's basics before going deeper
+  #   balanced = mix of verticalization and cross-topic balancing
+  learning_mode: balanced
+  # Lazy mastery decay: once a question is overdue, its effective mastery halves
+  # every `decay_half_life` seconds. Set to 0 to disable decay.
+  decay_half_life: 604800    # 7 days
